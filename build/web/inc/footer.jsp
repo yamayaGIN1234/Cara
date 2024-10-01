@@ -20,8 +20,8 @@
     <div class="col">
         <img class="logo" src="assets/images/logo.png" alt="">
         <h4>Contact</h4>
-        <p><strong>Address:</strong> Cao Dang Cong Nghiep - Hueic</p>
-        <p><strong>Phone:</strong> +84000111222</p>
+        <p><strong>Address:</strong> Dai Hoc Phu Xuan - UXI</p>
+        <p><strong>Phone:</strong> +84xxxxxxxx</p>
         <p><strong>Hours:</strong> 8AM - 21PM, Mon - Sat</p>
         <div class="follow">
             <h4>Follow us</h4>
