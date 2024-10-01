@@ -24,7 +24,7 @@
             <p>Save more with coupons & up to 70% off!</p>
             <div class="wrap-form">
                 <div class="search-form">
-                    <form action="https://amzuni.com/" class="w-full" method="get">
+                    <form action="#" class="w-full" method="get">
                         <div class="from-control flex items-center relative w-full">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon-search" fill="none" viewBox="0 0 24 24"
                                  stroke="currentColor" stroke-width="2">

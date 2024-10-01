@@ -21,10 +21,10 @@
         </li>
     </ul>
 </li>
-<li><a href="blog.html">Blog</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+<li><a href="BlogServlet">Blog</a></li>
+<li><a href="AboutServlet">About</a></li>
+<li><a href="ContactServlet">Contact</a></li>
+<li><a href="CartServlet"><i class="fa-solid fa-bag-shopping"></i></a></li>
 <li>
     <c:if test="${sessionScope.user == null}">
         <a href="LoginServlet">Login</a>
