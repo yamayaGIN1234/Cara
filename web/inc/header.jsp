@@ -9,7 +9,7 @@
 <header id="header">
     <a href="HomeServlet"><img src="assets/images/logo.png" class="logo" alt=""></a>
     <ul id="navbar">
-        <li><a class="active" href="index.html">Home</a></li>
+        <li><a class="active" href="HomeServlet">Home</a></li>
         <li>
             <a href="ShopServlet">Shop</a>
             <ul class="sub-menu">
