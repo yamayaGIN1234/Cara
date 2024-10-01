@@ -35,7 +35,7 @@
                     </div>
                     <button type="submit" class="normal">Register</button>
                     <div class="register-link">
-                        <p>Already have an Account? <a href="user.html">Login</a></p>
+                        <p>Already have an Account? <a href="UserServlet">Login</a></p>
                     </div>
                 </form>
             </div>

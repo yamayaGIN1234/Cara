@@ -7,7 +7,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <header id="header">
-    <a href="index.html"><img src="assets/images/logo.png" class="logo" alt=""></a>
+    <a href="HomeServlet"><img src="assets/images/logo.png" class="logo" alt=""></a>
     <ul id="navbar">
         <li><a class="active" href="index.html">Home</a></li>
         <li>

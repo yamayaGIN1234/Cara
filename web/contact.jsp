@@ -18,13 +18,13 @@
     <header id="header">
         <a href="#"><img src="assets/images/logo.png" class="logo" alt=""></a>
         <ul id="navbar">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a class="active" href="contact.html">Contact</a></li>
-            <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
-            <li><a href="user.html"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="HomeServlet">Home</a></li>
+            <li><a href="ShopServlet">Shop</a></li>
+            <li><a href="BlogServlet">Blog</a></li>
+            <li><a href="AboutServlet">About</a></li>
+            <li><a class="active" href="ContactServlet">Contact</a></li>
+            <li><a href="CartServlet"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            <li><a href="UserServlet"><i class="fa-solid fa-user"></i></a></li>
         </ul>
     </header>
 
@@ -44,7 +44,7 @@
                         <div>
                             <li>
                                 <i class="fa-regular fa-map"></i>
-                                <p>Nguyen Hue - Hue</p>
+                                <p>Tran Phu - Hue</p>
                             </li>
                             <li>
                                 <i class="fa-regular fa-envelope"></i>
@@ -64,7 +64,7 @@
                 <div class="col-md-6">
                     <div class="map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1238.156589141328!2d107.58738095850609!3d16.45748791701312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a147ba6bdbff%3A0x2e605afab4951ad9!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEPDtG5nIG5naGnhu4dwIEh14bq_!5e0!3m2!1svi!2s!4v1718154662562!5m2!1svi!2s"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.4941029167658!2d107.58298901155997!3d16.45050008422003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a1457c1ffc2d%3A0x32d40f91421ce10d!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBQaMO6IFh1w6Ju!5e0!3m2!1sen!2s!4v1727746095515!5m2!1sen!2s"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>

@@ -18,13 +18,13 @@
     <header id="header">
         <a href="#"><img src="assets/images/logo.png" class="logo" alt=""></a>
         <ul id="navbar">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a class="active" href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
-            <li><a href="user.html"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="HomeServlet">Home</a></li>
+            <li><a href="ShopServlet">Shop</a></li>
+            <li><a href="BlogServlet">Blog</a></li>
+            <li><a class="active" href="AboutServlet">About</a></li>
+            <li><a href="ContactServlet">Contact</a></li>
+            <li><a href="CartServlet"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            <li><a href="UserServlet"><i class="fa-solid fa-user"></i></a></li>
         </ul>
     </header>
 
