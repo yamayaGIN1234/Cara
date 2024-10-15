@@ -4,10 +4,8 @@
  */
 package bach.dev;
 
-import bach.dev.data.dao.CategoryDao;
 import bach.dev.data.dao.DatabaseDao;
 import bach.dev.data.dao.ProductDao;
-import bach.dev.data.model.Category;
 import bach.dev.data.model.Product;
 import bach.dev.util.Constants;
 import java.io.IOException;

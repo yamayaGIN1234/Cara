@@ -21,7 +21,7 @@ public class CategoryImpl implements CategoryDao {
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, category.getName());
-            stmt.setString(2, category.getThumbnail());
+            stmt.setString(2, category.getDescription());
 
             stmt.execute();
         } catch (SQLException e) {
@@ -34,11 +34,11 @@ public class CategoryImpl implements CategoryDao {
     @Override
     public boolean update(Category category) {
         // TODO Auto-generated method stub
-        String sql = "UPDATE CATEGORIES SET name = ?, thumbnail = ? WHERE id = ?";
+        String sql = "UPDATE CATEGORIES SET name = ?, description = ? WHERE id = ?";
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, category.getName());
-            stmt.setString(2, category.getThumbnail());
+            stmt.setString(2, category.getDescription());
             stmt.setInt(3, category.getId());
             return stmt.execute();
         } catch (SQLException e) {
@@ -75,9 +75,9 @@ public class CategoryImpl implements CategoryDao {
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 String name = rs.getString("name");
-                String thumbnail = rs.getString("thumbnail");
+                String description = rs.getString("description");
 
-                return new Category(id, name, thumbnail);
+                return new Category(id, name, description);
             }
         } catch (SQLException e) {
             // TODO Auto-generated catch block
@@ -98,9 +98,9 @@ public class CategoryImpl implements CategoryDao {
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
-                String thumbnail = rs.getString("thumbnail");
+                String description = rs.getString("description");
 
-                cateList.add(new Category(id, name, thumbnail));
+                cateList.add(new Category(id, name, description));
             }
         } catch (SQLException e) {
             // TODO Auto-generated catch block
@@ -120,9 +120,9 @@ public class CategoryImpl implements CategoryDao {
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
-                String thumbnail = rs.getString("thumbnail");
+                String description = rs.getString("description");
 
-                cateList.add(new Category(id, name, thumbnail));
+                cateList.add(new Category(id, name, description));
             }
         } catch (SQLException e) {
             // TODO Auto-generated catch block

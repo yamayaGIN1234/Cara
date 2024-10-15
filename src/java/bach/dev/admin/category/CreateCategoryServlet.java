@@ -29,15 +29,15 @@ public class CreateCategoryServlet extends BaseAdminServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String name = request.getParameter("name");
-        String thumbnail = request.getParameter("thumbnail");
+        String description = request.getParameter("description");
         HttpSession session = request.getSession();
         CategoryDao categoryDao = DatabaseDao.getInstance().getCategoryDao();
         
-        if(name.isEmpty() || thumbnail.isEmpty()){
+        if(name.isEmpty() || description.isEmpty()){
             session.setAttribute("error", "Vui long dien day du thong tin");
             request.getRequestDispatcher("admin/category/create.jsp").include(request, response);
         }else{
-            Category category = new Category(name, thumbnail);
+            Category category = new Category(name, description);
             categoryDao.insert(category);
             response.sendRedirect("IndexCategoryServlet");
         }

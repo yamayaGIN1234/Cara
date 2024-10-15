@@ -38,7 +38,6 @@ public class CategoryServlet extends BaseServlet {
             productList = productDao.findByCategory(categoryId);
         }
                 
-        
         CategoryDao categoryDao = DatabaseDao.getInstance().getCategoryDao();
         Category category = categoryDao.find(categoryId);
 

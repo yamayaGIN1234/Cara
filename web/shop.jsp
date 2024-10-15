@@ -1,6 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <html lang="en">
 
     <head>
@@ -12,38 +12,23 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
               integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
               crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
     </head>
 
     <body>
 
-        <%@include file="./inc/header.jsp"%>
+        <%@include file="./inc/header.jsp" %>
 
         <section id="page-header">
             <h2>#stayhome</h2>
             <p>Save more with coupons & up to 70% off!</p>
-            <div class="wrap-form">
-                <div class="search-form">
-                    <form action="#" class="w-full" method="get">
-                        <div class="from-control flex items-center relative w-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon-search" fill="none" viewBox="0 0 24 24"
-                                 stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                            </svg>
-                            <input name="s" placeholder="Search ..." type="text"
-                                   class="search-input w-full bg-white border-[1px] rounded-[30px] h-[40px] border-[#b3b3b3] pl-[40px]">
-                        </div>
-                    </form>
-                </div>
-            </div>
         </section>
 
         <section id="product1" class="section-p1">
             <div class="prod-cont">
-                <c:forEach items="${productList}" var="product">
+                <c:forEach var="product" items="${productList}">
                     <div class="prod">
-                        <img src="${product.thumbnail}" alt="">
+                        <a href="ProductServlet?productId=${product.id}&categoryId=${product.categoryId}"><img src="${product.thumbnail}" alt=""></a>
                         <div class="des">
                             <span>adidas</span>
                             <h5>${product.name}</h5>
@@ -63,13 +48,18 @@
         </section>
 
         <section id="pagination" class="section-p1">
-            <c:forEach var="i" begin="1" end="${numberPage + 1}">
-                <a <c:if test="${i == page}">class="active"</c:if>  href="ShopServlet?page=${i}">${i}</a>
+            <c:forEach var="i" begin="${startPage}" end="${endPage}">
+                <a <c:if test="${i == page}">class="active"</c:if> href="ShopServlet?page=${i}">${i}</a>
             </c:forEach>
-            <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+            <c:if test="${endPage < numberPage}">
+                <a href="ShopServlet?page=${endPage + 1}">...</a> 
+            </c:if>
+            <c:if test="${page < numberPage}">
+                <a href="ShopServlet?page=${page + 1}"><i class="fa-solid fa-arrow-right"></i></a>
+            </c:if>
         </section>
 
-        <%@include file="./inc/footer.jsp"%>
+        <%@include file="./inc/footer.jsp" %>
 
     </body>
 

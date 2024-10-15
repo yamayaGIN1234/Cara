@@ -64,7 +64,7 @@
                     <div class="prod">
                         <a href="ProductServlet?productId=${product.id}"><img src="${product.thumbnail}" alt=""></a>
                         <div class="des">
-                            <span>adidas</span>
+                            <span>${category.name}</span>
                             <h5>${product.name}</h5>
                             <div class="star">
                                 <i class="fas fa-star"></i>
@@ -95,8 +95,8 @@
                 <div class="prod">
                     <img src="${product.thumbnail}" alt="">
                     <div class="des">
-                        <span>adidas</span>
-                        <h5>${product.thumbnail}</h5>
+                        <span>${categories.name}</span>
+                        <h5>${product.name}</h5>
                         <div class="star">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>

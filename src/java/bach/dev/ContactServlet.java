@@ -9,10 +9,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- *
- * @author Admin
- */
 public class ContactServlet extends BaseServlet {
 
     

@@ -1,6 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <html lang="en">
 
     <head>
@@ -12,55 +12,59 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
               integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
               crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
     </head>
 
     <body>
 
-        <%@include file="./inc/header.jsp"%>
+        <%@include file="./inc/header.jsp" %>
 
-        <section id="page-header">
+        <section id="page-header"  class="text-center my-5">
             <h2>#${category.name}</h2>
             <p>Save more with coupons & up to 70% off!</p>
             <div class="wrap-form">
                 <div class="search-form">
                     <form action="SearchServlet" class="w-full" method="get">
-                        <div class="from-control flex items-center relative w-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon-search" fill="none" viewBox="0 0 24 24"
-                                 stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                            </svg>
-                            <input name="keyword" placeholder="Search ..." type="text"
-                                   class="search-input w-full bg-white border-[1px] rounded-[30px] h-[40px] border-[#b3b3b3] pl-[40px]">
+                        <div class="form-control">
+                            <i class="fas fa-search icon-search"></i>
+                            <input 
+                                name="keyword" 
+                                placeholder="Search ..." 
+                                type="text" 
+                                class="search-input bg-white border-[1px] rounded-[20px] border-[#b3b3b3] pl-[35px]"
+                                >
                         </div>
                     </form>
                 </div>
-            </div>+
+            </div>
+
+
+
         </section>
 
         <section id="product1" class="section-p1">
-            <div class="row">
-                <form action="CategoryServlet" class="filter" method="get">
-                    <input type="hidden" name="categoryId" value="${category.id}"/>
-                    <strong>Sort by:</strong>
-                    <select name="property" id="" class="form-control property">
-                        <option value="name">Name</option>
-                        <option value="price">Price</option>
-                        <option value="createdAt">Time</option>
-                    </select>
-                    <strong>Order by:</strong>
-                    <select name="order" id="" class="form-control order">
-                        <option value="asc">A-Z</option>
-                        <option value="desc">Z-A</option>
-                    </select>
-                    <button type="submit" class="filter-submit btn btn-primary">Filter</button>
-                </form>
-            </div>
+            <form action="CategoryServlet" method="get" class="sort-form" method="get">
+                <input type="hidden" name="categoryId" value="${category.id}"/>
+                <label for="sortBy">Sort by:</label>
+                <select name="property" id="sortBy">
+                    <option value="name">Name</option>
+                    <option value="price">Price</option>
+                    <option value="createdAt">Time</option>
+                </select>
+
+                <label for="orderBy">Order by:</label>
+                <select name="order" id="orderBy">
+                    <option value="asc">A-Z</option>
+                    <option value="desc">Z-A</option>
+                </select>
+
+                <button type="submit">Filter</button>
+            </form>
+
             <div class="prod-cont">
-                <c:forEach items="${productList}" var="product">
+                <c:forEach var="product" items="${productList}">
                     <div class="prod">
-                        <img src="${product.thumbnail}" alt="">
+                        <a href="ProductServlet?productId=${product.id}&categoryId=${product.categoryId}"><img src="${product.thumbnail}" alt=""></a>
                         <div class="des">
                             <span>adidas</span>
                             <h5>${product.name}</h5>
@@ -85,7 +89,7 @@
             <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
         </section>
 
-        <%@include file="./inc/footer.jsp"%>
+        <%@include file="./inc/footer.jsp" %>
 
     </body>
 

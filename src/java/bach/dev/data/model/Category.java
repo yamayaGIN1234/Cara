@@ -4,20 +4,20 @@ public class Category {
 
 	private int id;
 	private String name;
-	private String thumbnail;
+	private String description;
 
 	// insert vào
-	public Category(String name, String thumbnail) {
+	public Category(String name, String description) {
 		super();
 		this.name = name;
-		this.thumbnail = thumbnail;
+		this.description = description;
 	}
 
-	public Category(int id, String name, String thumbnail) {
+	public Category(int id, String name, String description) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.thumbnail = thumbnail;
+		this.description = description;
 	}
 
 	public int getId() {
@@ -36,11 +36,11 @@ public class Category {
 		this.name = name;
 	}
 
-	public String getThumbnail() {
-		return thumbnail;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setThumbnail(String thumbnail) {
-		this.thumbnail = thumbnail;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 }

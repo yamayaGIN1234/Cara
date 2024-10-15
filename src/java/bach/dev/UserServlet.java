@@ -19,7 +19,7 @@ public class UserServlet extends BaseServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("user.jsp").include(request, response);
+        request.getRequestDispatcher("login.jsp").include(request, response);
     }
 
     

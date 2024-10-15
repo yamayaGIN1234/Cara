@@ -1,9 +1,3 @@
-<%-- 
-    Document   : footer
-    Created on : Aug 12, 2024, 4:00:36 PM
-    Author     : Welcome
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <section id="newsletter" class="section-p1 section-m1">
     <div class="newstext">

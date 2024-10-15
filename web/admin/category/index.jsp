@@ -61,6 +61,7 @@
                                             <tr>
                                                 <th scope="col">#</th>
                                                 <th scope="col">Name</th>
+                                                <th scope="col">Description</th>
                                                 <th scope="col">#</th>
                                                 <th scope="col">#</th>
                                             </tr>
@@ -72,6 +73,7 @@
                                                 <tr>
                                                     <th scope="row">${i}</th>
                                                     <td>${category.name}</td>
+                                                    <td>${category.description}</td>
                                                     <td>
                                                         <a href="EditCategoryServlet?categoryId=${category.id}">Edit</a>
                                                     </td>
